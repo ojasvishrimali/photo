@@ -12,15 +12,15 @@
                 </tr>
                 <tr>
                    <td>pid</td>
-                   <td><input type="text" name="pid">
+                   <td><input type="text"  name="pid">
                </tr>
                <tr>
                    <td>pname</td>
-                   <td><input type="text" name="pname">
+                   <td><input type="text"  name="pname">
                </tr>
                   <tr>
-                    <td>photo</td>
-                    <td><input type="file" name="img"/></td>
+                    <td>Image</td>
+                    <td><input type="file"  name="img"/></td>
                 </tr>
                   <tr>
                   <td></td>
@@ -28,5 +28,6 @@
                 </tr>
             </table>
         </form>
+         <a href="ImageLoader">View Image</a>
     </body>
 </html>

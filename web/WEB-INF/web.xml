@@ -4,9 +4,17 @@
         <servlet-name>SaveImg</servlet-name>
         <servlet-class>SaveImg</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ImageLoader</servlet-name>
+        <servlet-class>ImageLoader</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SaveImg</servlet-name>
         <url-pattern>/SaveImg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImageLoader</servlet-name>
+        <url-pattern>/ImageLoader</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

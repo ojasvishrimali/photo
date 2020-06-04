@@ -18,9 +18,11 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
 public class SaveImg extends HttpServlet {
 
    
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    
+        protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         PrintWriter out=response.getWriter();
+        String pid = "";
         String pname="";
         byte imgdata[]=null;
         DiskFileItemFactory factory= new DiskFileItemFactory();
@@ -37,11 +39,10 @@ public class SaveImg extends HttpServlet {
                                 if(name.equals("img")){
                                     imgdata=item.get();
                                 }
+                                if(name.equals("pid")){
+                                    pid = item.getString();
+                                }
                             }
-                           
-          String pid=request.getParameter("pid"); 
-          
-         
           Connection con=mypkg.Data.connect();
           PreparedStatement ps1=con.prepareStatement("select pid from image");
           ResultSet rs=ps1.executeQuery();
@@ -62,7 +63,7 @@ public class SaveImg extends HttpServlet {
             
         }catch(Exception e)
         {
-            out.println(e);
+            out.println(e+pname);
         }
         
         
